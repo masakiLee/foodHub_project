@@ -1,0 +1,11 @@
+.breadcrumb {
+    align-items: center;
+
+    &__item a {
+        color: #2b3445;
+    }
+
+    .active {
+        color: rgba(0, 0, 0, .38);
+    }
+}

@@ -1,0 +1,176 @@
+.foodMenu {
+    margin: 72px 0 0;
+
+    @include padding(0.75, 0);
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+
+        @media screen and (min-width:992px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+    &__pic:nth-child(1) {
+        grid-area: 1/1/2/3;
+
+        @media screen and (min-width:992px) {
+            grid-area: 1/1/3/-3;
+
+        }
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    .foodMenuImage {
+        width: 150px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    &__info {
+        margin: 16px 0;
+    }
+
+    &__header {
+        @include flexbox(space-between);
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    &__cp {
+        gap: 8px;
+    }
+
+    &__cp,
+    &__star {
+        @include flexbox;
+    }
+
+    .score {
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .offcanvas__food {
+        width: 280px;
+    }
+
+    .offcanvas-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 16px 0 0 0;
+    }
+
+    .icon {
+        margin: 0 8px 0 0;
+        vertical-align: middle;
+    }
+
+    .tab-content {
+        margin: 32px 0 0 0;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        @media screen and (min-width:992px) {
+            grid-template-columns: 1fr 3fr;
+        }
+    }
+
+    &__list {
+        display: none;
+
+        @media screen and (min-width:992px) {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        border-right: 4px solid transparent;
+        color: #9e9e9e;
+
+        &:hover {
+            color: #D23F57;
+            border-right: 4px solid #D23F57;
+        }
+    }
+
+    &__item.active {
+        border-right: 4px solid #D23F57;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__template {
+        @include padding(0);
+
+        @media screen and (min-width:992px) {
+            @include padding(0, 0, 0, 0.75);
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @media screen and (min-width:768px) {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .btn__add {
+        align-self: start;
+
+        @media screen and (min-width:768px) {
+            align-self: center;
+            margin-left: auto;
+            @include flexbox;
+        }
+    }
+
+    .material-symbols-outlined {
+        font-size: 16px;
+    }
+}

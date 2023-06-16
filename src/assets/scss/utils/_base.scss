@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ol,
+ul,
+li,
+form,
+label,
+table,
+caption,
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+
+.btn-categories {
+    margin: 0 0 24px 0;
+    display: block;
+
+    @media screen and (min-width:992px) {
+        display: none;
+    }
+}
+
+.nav-tabs {
+    border: none;
+    --bs-nav-tabs-link-active-color: #D23F57;
+    --bs-nav-tabs-link-active-border-color: #fff #fff #D23F57;
+    --bs-nav-tabs-link-hover-border-color: #fff #fff #D23F57;
+    --bs-nav-tabs-border-width: 2px;
+
+
+}
+
+.nav-link {
+    color: #9E9E9E;
+    @include padding(0.5);
+
+    &:hover {
+        color: #D23F57;
+    }
+
+    @media screen and (min-width:768px) {
+        @include padding(0.5, 1)
+    }
+}

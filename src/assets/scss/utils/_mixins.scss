@@ -1,0 +1,31 @@
+$baseSpace: 16px;
+
+@mixin flexbox($justify-content: null) {
+    display: flex;
+    align-items: center;
+
+    @if $justify-content !=null {
+        justify-content: $justify-content;
+    }
+}
+
+@mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
+    padding-top: $top * $baseSpace;
+    padding-right: $right * $baseSpace;
+    padding-bottom: $bottom * $baseSpace;
+    padding-left: $left * $baseSpace;
+}
+
+@mixin gridbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @media screen and (min-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width:992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

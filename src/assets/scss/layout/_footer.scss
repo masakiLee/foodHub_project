@@ -1,0 +1,76 @@
+.footer {
+    background-color: #f6f9fc;
+    @include padding(4, 0);
+
+    &__content {
+        @include gridbox;
+        @include padding(0.75, 0);
+    }
+
+    &__logo {
+        width: 48px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    &__text {
+        color: #4b566b;
+        @include padding(1.5, 0);
+    }
+
+    &__download {
+        @include flexbox;
+        gap: 16px;
+    }
+
+    &__app {
+        width: 120px;
+        aspect-ratio: 120/45;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    &__title {
+        font-size: 24px;
+        @include padding(0, 0, 1, 0);
+    }
+
+    &__item {
+        @include padding(0, 0, 0.75, 0);
+
+    }
+
+    &__link {
+        display: block;
+
+        &:hover {
+            color: #d23f57;
+        }
+    }
+
+    &__link,
+    &__item {
+        color: #4b566b
+    }
+
+    &__social {
+        &__list {
+            @include flexbox;
+            @include padding(0.75, 0, 0, 0);
+            gap: 12px;
+        }
+
+        &__item {
+            background-color: #0f3460;
+            width: 32px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            @include flexbox(center);
+            box-shadow: -2px 2px 6px #4b566b;
+        }
+
+        &__icon {
+            display: block;
+        }
+    }
+}

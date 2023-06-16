@@ -1,0 +1,169 @@
+.header {
+    @include padding(0.75, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 20;
+
+    .shadow {
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &__content {
+        @include flexbox(space-between);
+    }
+
+    &__location {
+        @include flexbox;
+        gap: 40px;
+    }
+
+    &__link {
+        width: 48px;
+        aspect-ratio: 1/1;
+        background-image: url(../../images/logo.png);
+        background-size: cover;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        float: left;
+        color: white;
+    }
+
+    &__from {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        height: 48px;
+        display: none;
+
+        @media screen and (min-width: 992px) {
+            @include flexbox;
+        }
+    }
+
+    &__btn {
+        --bs-btn-border-radius: none;
+        --bs-btn-font-size: 16px;
+        @include flexbox;
+    }
+
+    .location__icons {
+        @include padding(0, 0.5, 0, 0);
+        vertical-align: baseline;
+    }
+
+    .location2__icons {
+        @include padding(1, 1, 1, 0);
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    &__search {
+        border: none;
+        height: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 360px;
+        }
+    }
+
+    .search__icons {
+        font-size: 16px;
+        vertical-align: baseline;
+        @include padding(0.25, 0);
+    }
+
+    &__navigation {
+        @include flexbox;
+        display: block;
+
+        &__user {
+            span {
+                vertical-align: text-top;
+            }
+
+            span:nth-child(2) {
+                display: none;
+                @include padding(0, 0, 0, 0.75);
+
+                @media screen and (min-width:768px) {
+                    display: inline
+                }
+            }
+        }
+
+        &__user,
+        &__shoppingCart,
+        &__menu {
+            @include padding(0.75);
+            color: rgba(0, 0, 0, 0.87);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+        }
+
+        &__user,
+        &__shoppingCart {
+            border-radius: 4px;
+        }
+
+        &__menu {
+            border-radius: 50%;
+        }
+    }
+}
+
+.btn-close:focus{
+    box-shadow: none;
+}
+
+.sideNavbar__body {
+    padding: 0;
+}
+
+.accordion-item {
+    border: none;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, .03);
+    }
+}
+
+.accordion {
+    --bs-accordion-active-bg: white;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button {
+    @include padding(0.5, 1, 0.5, 1.5);
+
+    &:hover {
+        background-color: rgb(210, 63, 87, .03);
+    }
+}
+
+.accordion-button::after {
+    background-image: url(../../icons/arrow_down.svg);
+    background-position: center;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../../icons/arrow_up.svg);
+    background-position: center;
+    transform: rotate(0deg)
+}
+
+.accordion-body {
+    @include padding(0)
+}
+
+.accordion-link {
+    display: block;
+    @include padding(0.5, 1, 0.5, 4)
+}

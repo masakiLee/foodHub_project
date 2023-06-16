@@ -1,0 +1,21 @@
+.popular {
+    @include padding(4, 0);
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        @include padding(0.75, 0)
+    }
+
+    &__localities {
+        @include gridbox;
+    }
+
+    &__link {
+        display: block
+    }
+
+    &__item {
+        @include padding(0.375, 0);
+    }
+}
